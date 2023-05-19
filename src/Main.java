@@ -16,15 +16,21 @@ public class Main extends PApplet {
     }
 
     public void draw() {
-        int x = 100;
+
+
+
+
+      /*  int x = 100;
         int y = 600;
         int size = 30;
         //first row
-        Rectangle a= rect(x, y, size, size);
-        rect(150, y, size, size);
-        rect(200, y, size, size);
-        rect(250, y, size, size);
-        rect(300, y, size, size);
+        rect(x, 100, size, size);
+        rect(150, 100, size, size);
+        rect(200, 100, size, size);
+        rect(250, 100, size, size);
+        rect(300, 100, size, size);
+
+
 
         //second row
         rect(x, 500, size, size);
@@ -55,14 +61,22 @@ public class Main extends PApplet {
         rect(300, 200, size, size);
 
         //sixth row
-        rect(x, 100, size, size);
-        rect(150, 100, size, size);
-        rect(200, 100, size, size);
-        rect(250, 100, size, size);
-        rect(300, 100, size, size);
+        rect(x, y, size, size);
+        rect(150, y, size, size);
+        rect(200, y, size, size);
+        rect(250, y, size, size);
+        rect(300, y, size, size);*/
+
+
+        //start button
+        rect(100, 200, 100, 50);
 
         //enter button
-        rect(200, 30, 70, 90);
+
+        rect(300,200,90,50);
+
+
+
 
 
     }
@@ -72,33 +86,51 @@ public class Main extends PApplet {
     }
 
    // mouseclick for start button if mouse clicked reset play game
-    public void MouseClicked(){
-        playGame();
+    public void mouseClicked() {
+        if (mouseX > 0 && mouseX < 100 && mouseY > 150 && mouseY < 200) {
+            playGame();
+        }
+
+        if(300<mouseX<390 &&150<mouseY<200);//fix
+        check();//write method
+    }
     }
 
     public void playGame(){
         String word=wordBank[getIndexWord()];
         System.out.println("Take a guess and click enter to submit!");
-        keypressed();
+        keyPressed();
+
+        //call to enter method
+
+        //check method
+
+
+
+
 
 
 
         //keypressed to guess
 
-        public void keyPressed() {
-            for (int i = 0; i <= 5; i++) {
+        public void keyPressed(){
+
                 //add something so printed in specific rectangle is key
-                String guess = guess + key;
+                //  text(key, rectx,recty,)
+             guess = guess + key;
             }
 
         }
 
 
-        //enter button mouseclicked
+        //enter button mouseclicked method
+
+        //check method
+
 
         //if statements to change color
-            //if get guess retutn scree
-            //if don't get guess in 6 teries return screen
+        //if get guess retutn scree
+        //if don't get guess in 6 teries return screen
 
 
     }
