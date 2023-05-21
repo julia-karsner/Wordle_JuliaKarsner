@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7787c428-b068-474c-944f-8e6ce45b23b9" name="Changes" comment="Today in class I wrote getIndexword method, mouseclicked for  start button, and started the large methof of the game(playGame method). Now I'm trying to figure out to get letters to show up in floating squares during guesses.">
-      <change afterPath="$PROJECT_DIR$/src/Squarw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SquareState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Squarw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Squarw.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +61,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684428088178</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Today in class I wrote getIndexword method, mouseclicked for  start button, and started the large methof of the game(playGame method). Now I'm trying to figure out to get letters to show up in floating squares during guesses.">
+      <created>1684535158373</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684535158373</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -83,12 +91,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>6</line>
+          <line>7</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>115</line>
+          <line>66</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

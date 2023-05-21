@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 private String[]wordBank;
 private String guess;
+private Square[][] squares;
 public class Main extends PApplet {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-    }
+
 
     String[] wordBank = {"towel", "phone", "sound", "watch"};
 
@@ -16,56 +16,6 @@ public class Main extends PApplet {
     }
 
     public void draw() {
-
-
-
-
-      /*  int x = 100;
-        int y = 600;
-        int size = 30;
-        //first row
-        rect(x, 100, size, size);
-        rect(150, 100, size, size);
-        rect(200, 100, size, size);
-        rect(250, 100, size, size);
-        rect(300, 100, size, size);
-
-
-
-        //second row
-        rect(x, 500, size, size);
-        rect(150, 500, size, size);
-        rect(200, 500, size, size);
-        rect(250, 500, size, size);
-        rect(300, 500, size, size);
-
-        //third row
-        rect(x, 400, size, size);
-        rect(150, 400, size, size);
-        rect(200, 400, size, size);
-        rect(250, 400, size, size);
-        rect(300, 400, size, size);
-
-        //fourth row
-        rect(x, 300, size, size);
-        rect(150, 300, size, size);
-        rect(200, 300, size, size);
-        rect(250, 300, size, size);
-        rect(300, 300, size, size);
-
-        //fifth row
-        rect(x, 200, size, size);
-        rect(150, 200, size, size);
-        rect(200, 200, size, size);
-        rect(250, 200, size, size);
-        rect(300, 200, size, size);
-
-        //sixth row
-        rect(x, y, size, size);
-        rect(150, y, size, size);
-        rect(200, y, size, size);
-        rect(250, y, size, size);
-        rect(300, y, size, size);*/
 
 
         //start button
@@ -82,6 +32,7 @@ public class Main extends PApplet {
     }
 //generate index of array to choose random word
     public int getIndexWord() {
+
         int x = (int) (Math.random() * wordBank.length);
     }
 
@@ -91,13 +42,13 @@ public class Main extends PApplet {
             playGame();
         }
 
-        if(300<mouseX<390 &&150<mouseY<200);//fix
+        if(mouseX>300 && mouseX<390 && mouseY>150 && mouseY <200);//fix
         check();//write method
     }
     }
 
-    public void playGame(){
-        String word=wordBank[getIndexWord()];
+    public void playGame() {
+        String word = wordBank[getIndexWord()];
         System.out.println("Take a guess and click enter to submit!");
         keyPressed();
 
@@ -105,8 +56,7 @@ public class Main extends PApplet {
 
         //check method
 
-
-
+    }
 
 
 
@@ -114,26 +64,22 @@ public class Main extends PApplet {
         //keypressed to guess
 
         public void keyPressed(){
-
-                //add something so printed in specific rectangle is key
-                //  text(key, rectx,recty,)
+            guess="";
+         while(guess.size()<=5){
              guess = guess + key;
+            text(key, board[row][col];
+            guessList(guess);
             }
 
         }
 
 
-        //enter button mouseclicked method
+        //getguess
 
-        //check method
-
-
-        //if statements to change color
-        //if get guess retutn scree
-        //if don't get guess in 6 teries return screen
 
 
     }
+
 
 
 
