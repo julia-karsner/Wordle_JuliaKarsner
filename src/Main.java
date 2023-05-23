@@ -2,50 +2,49 @@ import processing.core.PApplet;
 
 import java.util.ArrayList;
 
-private String[]wordBank;
-private String guess;
-private Square[][] squares;
+
+
+
 public class Main extends PApplet {
-    public static void main(String[] args) {
+    private String[] wordBank;
+    private String guess;
+    private String[]previousGuesses;
 
 
-    String[] wordBank = {"towel", "phone", "sound", "watch"};
+        String[] wordBank = {"towel", "phone", "sound", "watch"};
 
-    public void settings() {
-        size(400, 800);
-    }
-
-    public void draw() {
-
-
-        //start button
-        rect(100, 200, 100, 50);
-
-        //enter button
-
-        rect(300,200,90,50);
-
-
-
-
-
-    }
-//generate index of array to choose random word
-    public int getIndexWord() {
-
-        int x = (int) (Math.random() * wordBank.length);
-    }
-
-   // mouseclick for start button if mouse clicked reset play game
-    public void mouseClicked() {
-        if (mouseX > 0 && mouseX < 100 && mouseY > 150 && mouseY < 200) {
-            playGame();
+        public void settings () {
+            size(400, 800);
         }
 
-        if(mouseX>300 && mouseX<390 && mouseY>150 && mouseY <200);//fix
-        check();//write method
-    }
-    }
+        public void draw () {
+            //start button
+            rect(100, 200, 100, 50);
+
+            //enter button
+
+            rect(300, 200, 90, 50);
+
+            Board board = Board(200, 100, 200, 500, new String[] {"token", "trees"}, "hello");
+            board.draw();
+        }
+//generate index of array to choose random word
+        public int getIndexWord () {
+
+            int x = (int) (Math.random() * wordBank.length);
+        }
+
+        // mouseclick for start button if mouse clicked reset play game
+        public void mouseClicked () {
+            // start button
+            if (mouseX > 0 && mouseX < 100 && mouseY > 150 && mouseY < 200) {
+                playGame();
+            }
+
+            // enter button
+            if (mouseX > 300 && mouseX < 390 && mouseY > 150 && mouseY < 200) ;//fix
+            check();//write method
+        }
 
     public void playGame() {
         String word = wordBank[getIndexWord()];
@@ -59,31 +58,17 @@ public class Main extends PApplet {
     }
 
 
+    //key pressed to guess
 
-
-        //keypressed to guess
-
-        public void keyPressed(){
-            guess="";
-         while(guess.size()<=5){
-             guess = guess + key;
-            text(key, board[row][col];
-            guessList(guess);
-            }
-
+    public void keyPressed() {
+        // guess="";
+        if (!isGameOver && guess.size() < 5) {
+            guess = guess + key;
         }
-
-
-        //getguess
-
-
-
+        if (guess.size() == 5) {
+            check();
+            // System.out.println("Click Enter!")
+            guessList(guess);//add to check
+        }
     }
-
-
-
-
-
-
-
 }

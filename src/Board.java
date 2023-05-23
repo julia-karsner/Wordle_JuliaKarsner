@@ -3,7 +3,6 @@ import java.util.ArrayList;
     public class Board {
 
         private int x;
-
         private int y;
         private int size;
         private int row;
@@ -11,42 +10,47 @@ import java.util.ArrayList;
         private SquareState squarestate;//make class
         private String word;
 
-        private ArrayList<String>guessList=new ArrayList<String>();
+        private ArrayList<String> guessList = new ArrayList<String>();
 
-        public Board(int x, int y, int size, int row, int column, SquareState squareState,String word){//constructor is customizable board
+        public Board(int x, int y, int width, int height, String[] previousGuesses, String currentGuess) {//constructor is customizable board
             super();
-            this.x=x;
-            this.y=y;
+            this.x = x;
+            this.y = y;
             this.size = size;
             this.row = row;
             this.column = column;
-            this.squareState=BLANK;
-            this.word=getGuess();
-
-
         }
 
-        public Board(){
+        public Board() {
             super();
-            this.x=0;
-            this.y=0;
-            this.size =[6][5] ;
-            this.row =0;
+            this.x = 0;
+            this.y = 0;
+            this.size = 100;
+            this.row = 0;
             this.column = 0;
-            this.squareState=BLANK;
-            this.word=getGuess();
+            this.squareState = BLANK;
+            this.word = getGuess();
 
 
         }
 
+        public void draw() {
+            for (int r = 0; r < 7; r++) {
+                for (int c = 0; c < 6; c++) {
+                    rect(x, y, row, column);
+                }
+            }
+        }
 
 
         public int getHeight() {
             return row;
         }
 
+
+
         public int getWidth() {
-            return col;
+            return column;
         }
 
         public int countOfGuesses() {//make arraylist to hold all guess list
@@ -54,11 +58,30 @@ import java.util.ArrayList;
         }
 
         //boolean method to indicate if game is still going or over
-        public boolean isGameOver() {
-            if (guessCorrect || countOfGuesses == getHeight()) {
+
+        public boolean guessCorrect() {
+            if (guess.equals(word)) {
                 return true;
             }
         }
+
+
+
+        public boolean isGameOver() {
+            if (guessCorrect() || guestList.size() == getHeight()) {
+                return true;
+                screenDisplay();
+            }
+        }
+
+        public void screenDisplay(){
+        if(guessCorrect) {
+            System.out.println("You got it!");
+        }else{
+            System.out.println("Better Luck next time!");
+        }
+        }
+    }
 
         //arraylist holding all guesses in respective game
         public void guessList(String guess) {//arrarylist that holds all guesses in new game
@@ -71,22 +94,25 @@ import java.util.ArrayList;
 
 
 //compares guess to word to evaluate which color each square will be
-        public void stateEvaluation(){
-            if(guess.equals(word)){
-              for(int i=0;i<getRow().length;i++) {
-                  squareState = SquareState.GREEN;
-                  isGameOver() == true;
-              }
-            } else{
-                for(int i=0;i<guess.size();i++){
-                    if(guess.charAt(i)==word.charAt(i)) {
+        public void stateEvaluation() {
+            if (guess.equals(word)) {
+                for (int i = 0; i < getRow().length; i++) {
+                    squareState = SquareState.GREEN;
+                    isGameOver() == true;
+                }
+
+            } else {
+                for (int i = 0; i < guess.size(); i++) {
+                    if (guess.charAt(i) == word.charAt(i)) {
                         squarestate = SquareState.GREEN;
-                    }else if(word.contains(guess.charAt(i))){
+                    } else if (word.contains(guess.charAt(i))) {
                         squarestate = SquareState.YELLOW;
-                    }else{
+                    } else {
                         squarestate = SquareState.BLANK;
                     }
                 }
+            }
+        }
 
 
         //draws color of each letter in row according to state evaluation
