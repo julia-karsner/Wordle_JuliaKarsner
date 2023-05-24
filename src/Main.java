@@ -6,12 +6,20 @@ import java.util.ArrayList;
 
 
 public class Main extends PApplet {
-    private String[] wordBank;
+    private final String[] wordBank= {"towel", "phone", "sound", "watch"};
     private String guess;
-    private String[]previousGuesses;
+    private ArrayList<String> guessList;
 
 
-        String[] wordBank = {"towel", "phone", "sound", "watch"};
+    public void setup() {
+
+
+
+        board = Board(200, 100, 200, 500);
+
+
+    }
+
 
         public void settings () {
             size(400, 800);
@@ -25,8 +33,12 @@ public class Main extends PApplet {
 
             rect(300, 200, 90, 50);
 
-            Board board = Board(200, 100, 200, 500, new String[] {"token", "trees"}, "hello");
+            //example of object to create
+
+            //draw print letters
+           // for(int i=i;i<)
             board.draw();
+
         }
 //generate index of array to choose random word
         public int getIndexWord () {
@@ -49,7 +61,6 @@ public class Main extends PApplet {
     public void playGame() {
         String word = wordBank[getIndexWord()];
         System.out.println("Take a guess and click enter to submit!");
-        keyPressed();
 
         //call to enter method
 
@@ -62,12 +73,14 @@ public class Main extends PApplet {
 
     public void keyPressed() {
         // guess="";
-        if (!isGameOver && guess.size() < 5) {
+        if (!isGameOver() && guess.length() < 5) {
             guess = guess + key;
         }
-        if (guess.size() == 5) {
-            check();
+        if (guess.length() == 5) {
+            stateEvaluation();// call state
             // System.out.println("Click Enter!")
+
+
             guessList(guess);//add to check
         }
     }

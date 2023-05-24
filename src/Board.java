@@ -5,14 +5,12 @@ import java.util.ArrayList;
         private int x;
         private int y;
         private int size;
-        private int row;
-        private int column;
         private SquareState squarestate;//make class
         private String word;
 
         private ArrayList<String> guessList = new ArrayList<String>();
 
-        public Board(int x, int y, int width, int height, String[] previousGuesses, String currentGuess) {//constructor is customizable board
+        public Board(int x, int y, int width, int height, String[] previousGuesses, String currentGuess) {
             super();
             this.x = x;
             this.y = y;

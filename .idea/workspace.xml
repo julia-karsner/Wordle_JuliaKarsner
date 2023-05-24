@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7787c428-b068-474c-944f-8e6ce45b23b9" name="Changes" comment="Today in class I wrote getIndexword method, mouseclicked for  start button, and started the large methof of the game(playGame method). Now I'm trying to figure out to get letters to show up in floating squares during guesses.">
-      <change afterPath="$PROJECT_DIR$/src/SquareState.java" afterDir="false" />
+    <list default="true" id="7787c428-b068-474c-944f-8e6ce45b23b9" name="Changes" comment="In class I worked through some keypress logic,still a bit confused.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Squarw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Squarw.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +22,21 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9d3f362b-2e02-42e3-9fbc-58ce51cca0ff" />
+        <option name="url" value="https://github.com/julia-karsner/Wordle_JuliaKarsner.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,6 +58,20 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Wordle-Julia Karsner" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,7 +95,28 @@
       <option name="project" value="LOCAL" />
       <updated>1684535158373</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Today in class I wrote getIndexword method, mouseclicked for  start button, and started the large methof of the game(playGame method). Now I'm trying to figure out to get letters to show up in floating squares during guesses.">
+      <created>1684698316964</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684698316964</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Today 2.5 hours-I created square class to make board and within the square class I created constructors,getters, a method adding all guesses to an arraylist,a state evaluation method which works depending on comparing letters of guess to letters of target word, and a display method that changes color of square depending on state.           &#10;&#10;I also created SquareState class.&#10;&#10;I made editsto keypressed in main.&#10;&#10;Moving forward I need to debug and finish keypressed and playGame methods in main.">
+      <created>1684698546518</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684698546518</updated>
+    </task>
+    <task id="LOCAL-00005" summary="&#10;Last night I created the physical board using nested iteration, I fixed some keypress logic, and started debugging.">
+      <created>1684874542729</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684874542729</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -84,20 +132,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Today in class I wrote getIndexword method, mouseclicked for  start button, and started the large methof of the game(playGame method). Now I'm trying to figure out to get letters to show up in floating squares during guesses." />
-    <option name="LAST_COMMIT_MESSAGE" value="Today in class I wrote getIndexword method, mouseclicked for  start button, and started the large methof of the game(playGame method). Now I'm trying to figure out to get letters to show up in floating squares during guesses." />
+    <MESSAGE value="Today 2.5 hours-I created square class to make board and within the square class I created constructors,getters, a method adding all guesses to an arraylist,a state evaluation method which works depending on comparing letters of guess to letters of target word, and a display method that changes color of square depending on state.           &#10;&#10;I also created SquareState class.&#10;&#10;I made editsto keypressed in main.&#10;&#10;Moving forward I need to debug and finish keypressed and playGame methods in main." />
+    <MESSAGE value="&#10;Last night I created the physical board using nested iteration, I fixed some keypress logic, and started debugging." />
+    <MESSAGE value="In class I worked through some keypress logic,still a bit confused." />
+    <option name="LAST_COMMIT_MESSAGE" value="In class I worked through some keypress logic,still a bit confused." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>7</line>
+          <line>37</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
