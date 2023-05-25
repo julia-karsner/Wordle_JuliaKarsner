@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 
 public class Main extends PApplet {
-    private final String[] wordBank= {"towel", "phone", "sound", "watch"};
+    private final String[] wordBank= {"towel", "phone", "sound", "watch","petal","metal","cards","stilt"};
     private String guess="";
     private ArrayList<String> guessList = new ArrayList<String>();
 
-    private String mysteryWord="found";
+    private String mysteryWord;
     public static Main app;
 
     public static void main (String[] args){
@@ -24,6 +24,8 @@ public class Main extends PApplet {
 
     public void setup() {
 
+         mysteryWord=wordBank[getIndexWord()];
+
 //
 //
 //        board = Board(200, 100, 200, 500);
@@ -33,12 +35,20 @@ public class Main extends PApplet {
 
 
         public void settings () {
-            size(400, 800);
+            size(400, 600);
         }
 
         public void draw () {
+
+            background(0);
+
+
             //start button
-           // rect(100, 200, 100, 50);
+            rect(200, 500, 170, 80);
+            fill(200,100,5);
+            text("START",  280,550);
+
+
 
             //enter button
 
@@ -72,6 +82,7 @@ public class Main extends PApplet {
                     // yellow: letter is in the word, but in the incorrect place
                     text(letter, j * 50 + 50, i * 60 + 60);
                 }
+
             }
 
             // print the guess
@@ -88,6 +99,10 @@ public class Main extends PApplet {
            if(youLose()){
                fill(255);
                text("Loser",180,400);
+           }
+        if(guessList.size()>0 && !isWin()&&!youLose()) {//make so appear
+               fill(255);
+              text("Guess Again", 180, 400);
            }
 
         }
@@ -132,7 +147,7 @@ public class Main extends PApplet {
     //key pressed to guess
 
     public void keyPressed() {
-        if ( guess.length() < 5&& guessList.size()<6) {
+        if ( guess.length() < 5&& guessList.size()<6&& !isWin()) {
             guess = guess + key;
        }
         if(guess.length()==5){
